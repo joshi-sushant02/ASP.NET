@@ -131,8 +131,8 @@
     <Content Include="MyDemoPage2.aspx" />
     <Content Include="profileCss.css" />
     <Content Include="ProfilePage.aspx" />
-    <Content Include="StyleSheet1.css" />
-    <Content Include="StyleSheet2.css" />
+    <Content Include="signUp.css" />
+    <Content Include="loginPage.css" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm2.aspx" />
     <Content Include="WebForm3.aspx" />

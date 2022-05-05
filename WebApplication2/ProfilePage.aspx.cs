@@ -16,7 +16,7 @@ namespace WebApplication2
            
 
 
-           SqlCommand cmd = new SqlCommand("select * from userDetails", con);
+           SqlCommand cmd = new SqlCommand("select * from userDetails where  id=(select max(id) from userDetails)", con);
             con.Open();
 
             SqlDataReader dr = cmd.ExecuteReader();
@@ -24,6 +24,7 @@ namespace WebApplication2
                 
             Label1.Text = dr.GetValue(1).ToString();
             Label2.Text = dr.GetValue(2).ToString();
+            Label3.Text = dr.GetValue(4).ToString();
                 dr.Close(); 
             }
             con.Close();

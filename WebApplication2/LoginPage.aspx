@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <!--Stylesheet-->
-    <link rel="stylesheet" href="StyleSheet2.css">
+    <link rel="stylesheet" href=".css">
     <title></title>
 </head>
 <body>
@@ -25,10 +25,16 @@
      
         &nbsp;<label for="password">Password</label>
         <input type="password" placeholder="Password" id="password" runat="server"><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="password" ErrorMessage="Please enter password"></asp:RequiredFieldValidator>
+     <div class="frgt">
 
+      <div class="frg">
+
+         <asp:Button ID="Button3" runat="server" Text="Forgot Password" PostBackUrl="~/WebForm2.aspx" CausesValidation="false"/>
+      </div>  
+     </div>  
         <div class="social">
-          <div class="go"><asp:Button ID="Button1" runat="server" Text="Login Now" /> </div>
-          <div class="fb"><asp:Button ID="Button2" runat="server" Text="Enter->" PostBackUrl="~/WebForm2.aspx"/></div>
+          <div class="go"><asp:Button ID="Button1" runat="server" Text="Back" PostBackUrl="~/MyDemoPage.aspx" CausesValidation="false" /> </div>
+          <div class="fb"><asp:Button ID="Button2" runat="server" Text="Login" OnClick="Button2_Click"/></div>
         </div>
         
       

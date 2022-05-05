@@ -147,12 +147,21 @@ div *{
     <form runat="server">
          <div>
             <p style="color:aquamarine">
-                YOUR DATA WAS SUCESSFULLY SUBMITTED!!
+                Enter the name of your First School
+            </p>
+             <p style="color:aquamarine">
+                 &nbsp;</p>
+             <p style="color:aquamarine">
+                 &nbsp;</p>
+             <p style="color:aquamarine">
+                 
+                 <asp:TextBox BackColor="black" ID="SecurityQ" runat="server"></asp:TextBox>
+                    
             </p>
         </div>
        <div class="social">
-          <div class="go"><asp:Button BackColor="Transparent" ID="Button1" runat="server" Text="Back" PostBackUrl="~/MyDemoPage.aspx"/> </div>
-          <div class="fb"><asp:Button  BackColor="Transparent" ID="Button2" runat="server" Text="Next" PostBackUrl="~/calculator.aspx"/></div>
+          <div class="go"><asp:Button BackColor="Transparent" ID="Button1" runat="server" Text="Back" PostBackUrl="~/MyDemoPage.aspx" OnClick="Button1_Click"/> </div>
+          <div class="fb"><asp:Button  BackColor="Transparent" ID="Button2" runat="server" Text="Next" PostBackUrl="~/ProfilePage.aspx"/></div>
         </div>
     </form>
    

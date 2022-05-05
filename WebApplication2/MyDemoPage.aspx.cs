@@ -46,7 +46,7 @@ namespace WebApplication2
         {
 
             con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=user;Integrated Security=True");
-            cmd = new SqlCommand("Insert into userDetails (email,mobileNo,password) values('" + Text1.Value + "','" + Text2.Value + "','" + password.Value + "')", con);
+            cmd = new SqlCommand("Insert into userDetails (email,mobileNo,password,securityQ) values('" + Text1.Value + "','" + Text2.Value + "','" + password.Value + "','" + securityQ.Value + "')", con);
 
 
             con.Open();
@@ -63,5 +63,24 @@ namespace WebApplication2
 
         }
 
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=user;Integrated Security=True");
+            cmd = new SqlCommand("Insert into userDetails (email,mobileNo,password,securityQ) values('" + Text1.Value + "','" + Text2.Value + "','" + password.Value + "','" + securityQ.Value + "')", con);
+
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+
+            cmd = new SqlCommand("select * from userDetails", con);
+            con.Open();
+            GridView1.DataSource = cmd.ExecuteReader();
+            GridView1.DataBind();
+            con.Close();
+
+            Response.Redirect("ProfilePage.aspx");
+        }
     }
 }

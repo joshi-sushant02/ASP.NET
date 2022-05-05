@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <!--Stylesheet-->
-    <link rel="stylesheet" href="StyleSheet1.css">
+  <link rel="stylesheet" href="signUn.css" />
+
     
 </head>
 <body>
@@ -25,7 +26,7 @@
         <div class="shape"></div>
     </div>
     <form runat="server">
-        <h3>Signin Here</h3>
+        <h3>SignUp Here</h3>
 <label for="username">Email</label><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Text1" ErrorMessage="Please enter email"></asp:RequiredFieldValidator>
 
         <input type="text" placeholder="Email" id="Text1" runat="server"><asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="Text1" ErrorMessage="Please enter valid email Id" ValidationExpression="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}"></asp:RegularExpressionValidator>
@@ -41,16 +42,24 @@
         <input type="password" placeholder="Confirm" id="password1" runat="server"><asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="password" ControlToValidate="password1" ErrorMessage="Password dosen't match"></asp:CompareValidator>
         
 
+        &nbsp;<label for="securityQ">Security Question</label>
+        <input type="text" placeholder="What is the name of your Fisrt School" id="securityQ" runat="server">
+        
+
         <!--
         <asp:Button ID="Button3" runat="server" Text="Login Now" OnClick="Login2" />
         
         -->
         <div class="social">
-          <div class="go"><asp:Button ID="Button1" runat="server" Text="Login Now" OnClick="Login3"/> </div>
-          <div class="fb"><asp:Button ID="Button2" runat="server" Text="Enter->" PostBackUrl="~/WebForm2.aspx"/></div>
-        </div>
+          <div class="go"><asp:Button ID="Button1" runat="server" Text="SignIn" PostBackUrl="~/LoginPage.aspx" CausesValidation="false"/> </div>
+         <div class="fb"><asp:Button ID="Button2" runat="server" Text="SignUp"  OnClick="Button2_Click"/></div>
+        
+        
+             </div>
+        
         
       
+       
         
         <asp:GridView ID="GridView1" runat="server" ForeColor="Red">
       

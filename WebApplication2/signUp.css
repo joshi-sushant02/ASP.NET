@@ -8,6 +8,7 @@
 
 body {
     background-color: #080710;
+    
 }
 
 .background {
@@ -29,17 +30,17 @@ body {
 .shape:first-child {
     background: linear-gradient( #1845ad, #23a2f6 );
     left: -80px;
-    top: -80px;
+    top: -160px;
 }
 
 .shape:last-child {
     background: linear-gradient( to right, #ff512f, #f09819 );
-    right: -40px;
-    bottom: -80px;
+    right: -60px;
+    bottom: -250px;
 }
 
 form {
-    height: 520px;
+    height: 850px;
     width: 450px;
     background-color: rgba(255,255,255,0.13);
     position: absolute;
@@ -50,7 +51,8 @@ form {
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255,255,255,0.1);
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    padding: 50px 35px;
+    padding: 50px 35px ;
+    margin-top:50px;
 }
 
     form * {
@@ -99,7 +101,7 @@ button {
     padding: 15px 0;
     font-size: 18px;
     font-weight: 600;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
 }
 
@@ -111,7 +113,7 @@ button {
     .social div {
         background: red;
         width: 150px;
-        border-radius: 3px;
+        border-radius: 20px;
         padding: 5px 10px 10px 5px;
         background-color: rgba(255,255,255,0.27);
         color: #eaf0fb;
