@@ -4,13 +4,23 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using System.Data.SqlClient;
 namespace WebApplication2
 {
     public partial class MyDemoPage : System.Web.UI.Page
     {
+            SqlConnection con;
+            SqlCommand cmd ;  
         protected void Page_Load(object sender, EventArgs e)
         {
+            //con= new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=user;Integrated Security=True");
+            //cmd= new SqlCommand("Insert into userDetails (email,mobileNo,password) values('"+Text1.Value+"','"+Text2.Value+"','"+password.Value+"')", con);
+            //
+            //
+            //con.Open();
+            //cmd.ExecuteNonQuery();
+            //con.Close();
+            //cmd = new SqlCommand("select * from userDetails",con);
 
         }
         protected void Login(object sender, EventArgs e)
@@ -30,6 +40,26 @@ namespace WebApplication2
             password1.Visible = false;
             
           
+
+        }
+        protected void Login3(object sender, EventArgs e)
+        {
+
+            con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=user;Integrated Security=True");
+            cmd = new SqlCommand("Insert into userDetails (email,mobileNo,password) values('" + Text1.Value + "','" + Text2.Value + "','" + password.Value + "')", con);
+
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+
+            cmd = new SqlCommand("select * from userDetails", con);
+            con.Open();
+           GridView1.DataSource= cmd.ExecuteReader();
+            GridView1.DataBind();
+            con.Close();
+
 
         }
 

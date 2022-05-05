@@ -1,0 +1,116 @@
+﻿<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #080710;
+}
+
+.background {
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+
+    .background .shape {
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        border-radius: 50%;
+    }
+
+.shape:first-child {
+    background: linear-gradient( #1845ad, #23a2f6 );
+    left: -80px;
+    top: -150px;
+}
+
+.shape:last-child {
+    background: linear-gradient( to right, #ff512f, #f09819 );
+    right: -40px;
+    bottom: -180px;
+}
+
+
+.card {
+    
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    height: 720px;
+    width: 450px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+.title {
+    color: white;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.submit2 {
+    height: 1cm;
+    width: 3cm;
+    background: #6F4E37;
+    border-radius: 10px;
+    margin-top: 0.2cm;
+}
+
+    .submit2 button:hover {
+        background: #000;
+    }
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+.bill a {
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+}
+
+button:hover, a:hover {
+    opacity: 0.7;
+}
+
+.image {
+    height: 200px;
+    width: 140px;
+    border-radius: 50%;
+    margin-left:35%;
+    margin-right:65%;
+    
+}
