@@ -22,15 +22,17 @@ namespace WebApplication2
 
             try
             {
-                SqlCommand cmd = new SqlCommand("select * from userDetails where email='" + Text1.Value + "' AND password='" + password.Value + "'", con);
             
               
+                SqlCommand cmd = new SqlCommand("select * from userDetails where email='" + Text1.Value + "' AND password='" + password.Value + "'", con);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
                 if(Text1.Value== dr.GetValue(1).ToString()  || password.Value == dr.GetValue(3).ToString())
                 {
-            
+                
+                        SqlCommand cmd1 = new SqlCommand("Insert into Login (email,mobileNo,password) values('" + Text1.Value + "','" + dr.GetValue(2).ToString() + "','" + password.Value +"')", con);
+
                         Response.Redirect("ProfilePage.aspx");
                     }
                    
@@ -43,11 +45,13 @@ namespace WebApplication2
 
             catch (Exception ex)
             {
-                string message = string.Format("Message: {0}\\n\\n", ex.Message);
-                message += string.Format("StackTrace: {0}\\n\\n", ex.StackTrace.Replace(Environment.NewLine, string.Empty));
-                message += string.Format("Source: {0}\\n\\n", ex.Source.Replace(Environment.NewLine, string.Empty));
-                message += string.Format("TargetSite: {0}", ex.TargetSite.ToString().Replace(Environment.NewLine, string.Empty));
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert(\"" + message + "\");", true);
+                Response.Write("gcvdg");
+                ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "done", "alert('" + ex.Message.Replace("'", "") + "');", true);
+                // string message = string.Format("Message: {0}\\n\\n", ex.Message);
+                // message += string.Format("StackTrace: {0}\\n\\n", ex.StackTrace.Replace(Environment.NewLine, string.Empty));
+                // message += string.Format("Source: {0}\\n\\n", ex.Source.Replace(Environment.NewLine, string.Empty));
+                // message += string.Format("TargetSite: {0}", ex.TargetSite.ToString().Replace(Environment.NewLine, string.Empty));
+                // ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert(\"" + message + "\");", true);
 
 
             }

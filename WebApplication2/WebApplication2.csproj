@@ -132,7 +132,7 @@
     <Content Include="profileCss.css" />
     <Content Include="ProfilePage.aspx" />
     <Content Include="signUp.css" />
-    <Content Include="loginPage.css" />
+    <Content Include="LoginPage.css" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm2.aspx" />
     <Content Include="WebForm3.aspx" />
