@@ -8,43 +8,47 @@ using System.Data.SqlClient;
 
 namespace WebApplication2
 {
-    public partial class LoginPage : System.Web.UI.Page
+    public partial class forgot : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void forgotpass(object sender, EventArgs e)
         {
+
             SqlConnection con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=user;Integrated Security=True");
             con.Open();
 
             try
             {
-            
-              
-                SqlCommand cmd = new SqlCommand("select * from userDetails where email='" + Text1.Value + "' AND password='" + password.Value + "'", con);
-            SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.Read())
-            {
-                if(Text1.Value== dr.GetValue(1).ToString()  && password.Value == dr.GetValue(3).ToString())
+
+
+                SqlCommand cmd4 = new SqlCommand("select * from userDetails where email='" + Text1.Value  + "'", con);
+                SqlDataReader dr1 = cmd4.ExecuteReader();
+                if (dr1.Read())
                 {
-                
-                        SqlCommand cmd1 = new SqlCommand("Insert into Login (email,mobileNo,password) values('" + Text1.Value + "','" + dr.GetValue(2).ToString() + "','" + password.Value +"')", con);
-                dr.Close();
+                    if (securityQ.Value == dr1.GetValue(4).ToString() && securityQ.Value!=null)
+                    {
+
+                        SqlCommand cmd1 = new SqlCommand("Insert into Login (email,mobileNo,password) values('" + Text1.Value + "','" + dr1.GetValue(2).ToString() + "','" + password.Value + "')", con);
+
+                        dr1.Close();
+                        SqlCommand cmd2 = new SqlCommand("update  userDetails set password='" + password.Value + "'", con);
                         cmd1.ExecuteNonQuery();
+                        cmd2.ExecuteNonQuery();
                         Response.Redirect("ProfilePage.aspx");
                     }
                     else
                     {
-                        ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "done", "alert('"+ " Invalid email or password" +"');", true);
+                        ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "done", "alert Incorrect Security Answer", true);
 
                     }
 
 
                 }
-            
+
             }
 
             catch (Exception ex)
@@ -60,10 +64,9 @@ namespace WebApplication2
 
             }
             con.Close();
+
+
+
         }
-
-        
-
-       
     }
 }

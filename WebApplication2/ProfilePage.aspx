@@ -47,7 +47,9 @@
     <a href="#"><i class="fa fa-linkedin"></i></a>  
     <a href="#"><i class="fa fa-facebook"></i></a> 
   </div>
-  <button class="submit2"><a href="index.html">Done</a></button>
+  
+
+    <asp:Button class="submit2" ID="Button2" runat="server" Text="Logout" OnClick="Button2_Click" />
   <p><button class="bill">   <a href="bill.php"> Get bill</a></button></p>
 </div>
 

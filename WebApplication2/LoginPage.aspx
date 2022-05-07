@@ -25,16 +25,17 @@
      
         &nbsp;<label for="password">Password</label>
         <input type="password" placeholder="Password" id="password" runat="server"><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="password" ErrorMessage="Please enter password"></asp:RequiredFieldValidator>
-     <div class="frgt">
+    
+        <div class="frgt">
 
       <div class="frg">
 
-         <asp:Button ID="Button3" runat="server" Text="Forgot Password" PostBackUrl="~/WebForm2.aspx" CausesValidation="false"/>
+         <asp:Button ID="Button3" BackColor="green" runat="server" Text="Forgot Password" PostBackUrl="~/forgot.aspx" CausesValidation="false"/>
       </div>  
      </div>  
         <div class="social">
           <div class="go"><asp:Button ID="Button1" runat="server" Text="Back" PostBackUrl="~/MyDemoPage.aspx" CausesValidation="false" /> </div>
-          <div class="fb"><asp:Button ID="Button2" runat="server" Text="Login" OnClick="Button2_Click"/></div>
+          <div class="fb"><asp:Button ID="Button2" runat="server" Text="Signin" OnClick="Button2_Click"/></div>
         </div>
         
       

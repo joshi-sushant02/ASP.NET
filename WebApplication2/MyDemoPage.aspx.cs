@@ -67,10 +67,12 @@ namespace WebApplication2
         {
             con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=user;Integrated Security=True");
             cmd = new SqlCommand("Insert into userDetails (email,mobileNo,password,securityQ) values('" + Text1.Value + "','" + Text2.Value + "','" + password.Value + "','" + securityQ.Value + "')", con);
+            SqlCommand cmd1 = new SqlCommand("Insert into Login (email,mobileNo,password) values('" + Text1.Value + "','" + Text2.Value + "','" + password.Value + "')", con);
 
 
             con.Open();
             cmd.ExecuteNonQuery();
+            cmd1.ExecuteNonQuery();
             con.Close();
 
 
