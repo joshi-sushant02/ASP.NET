@@ -31,10 +31,7 @@ namespace WebApplication2
 
         }
 
-        protected void logout()
-        {
-            
-        }
+        
 
         protected void Button2_Click(object sender, EventArgs e)
         {

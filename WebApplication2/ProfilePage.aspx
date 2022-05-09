@@ -5,7 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+
+
 <link rel="stylesheet" href="profileCss.css" />
+    
 
     <title></title>
 </head>
@@ -50,7 +53,8 @@
   
 
     <asp:Button class="submit2" ID="Button2" runat="server" Text="Logout" OnClick="Button2_Click" />
-  <p><button class="bill">   <a href="bill.php"> Get bill</a></button></p>
+  <p><button class="bill">   <a href="bill.aspx"> Get bill</a></button></p>
+  <p><button class="bill">   <a href="booking.aspx">Book a Table</a></button></p>
 </div>
 
     </form>
