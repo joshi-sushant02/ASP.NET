@@ -17,9 +17,9 @@
         <input type="text" placeholder="Email" id="Text1" runat="server">
         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="Text1" ErrorMessage="Please enter valid email Id" ValidationExpression="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-zA-Z]{2,4}"></asp:RegularExpressionValidator>
 
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="securityQ" ErrorMessage="Please enter email"></asp:RequiredFieldValidator>
       &nbsp;<label for="securityQ">Security Answer</label>
         <input type="text" placeholder="What is the name of your Fisrt School" id="securityQ" runat="server">
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="securityQ" ErrorMessage="Please enter security answer"></asp:RequiredFieldValidator>
         
         &nbsp;<label for="password">Password</label>
         <input type="password" placeholder="Password" id="password" runat="server"><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="password" ErrorMessage="Please enter password"></asp:RequiredFieldValidator>

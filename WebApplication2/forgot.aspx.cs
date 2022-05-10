@@ -29,7 +29,7 @@ namespace WebApplication2
                 SqlDataReader dr1 = cmd4.ExecuteReader();
                 if (dr1.Read())
                 {
-                    if (securityQ.Value == dr1.GetValue(4).ToString() && securityQ.Value!=null)
+                    if (securityQ.Value == dr1.GetValue(4).ToString() && securityQ.Value!=" ")
                     {
 
                         SqlCommand cmd1 = new SqlCommand("Insert into Login (email,mobileNo,password) values('" + Text1.Value + "','" + dr1.GetValue(2).ToString() + "','" + password.Value + "')", con);
@@ -42,10 +42,18 @@ namespace WebApplication2
                     }
                     else
                     {
-                        ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "done", "alert Incorrect Security Answer", true);
+                        Response.Write("<script>alert('Security Answer doesnt Match!!!')</script>");
+
+
+
 
                     }
 
+
+                }
+                else
+                {
+                        Response.Write("<script>alert('Invalid Email Id!!!')</script>");
 
                 }
 
@@ -53,14 +61,8 @@ namespace WebApplication2
 
             catch (Exception ex)
             {
-                Response.Write("gcvdg");
-                ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "done", "alert('" + ex.Message.Replace("'", "") + "');", true);
-                // string message = string.Format("Message: {0}\\n\\n", ex.Message);
-                // message += string.Format("StackTrace: {0}\\n\\n", ex.StackTrace.Replace(Environment.NewLine, string.Empty));
-                // message += string.Format("Source: {0}\\n\\n", ex.Source.Replace(Environment.NewLine, string.Empty));
-                // message += string.Format("TargetSite: {0}", ex.TargetSite.ToString().Replace(Environment.NewLine, string.Empty));
-                // ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert(\"" + message + "\");", true);
-
+               
+                        Response.Write("<script>alert('Oops semthing went wrong!!!')</script>");
 
             }
             con.Close();

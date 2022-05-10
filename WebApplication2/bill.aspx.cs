@@ -28,7 +28,7 @@ namespace WebApplication2
               peoplee.Text = dr.GetValue(2).ToString();
                typee.Text = dr.GetValue(1).ToString();
                timee.Text = dr.GetValue(3).ToString();
-               date.Text = dr.GetValue(4).ToString();
+                date.Text = DateTime.Now.ToString();
                date2.Text = dr.GetValue(4).ToString();
                
                 dr.Close();
