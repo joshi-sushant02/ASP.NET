@@ -94,6 +94,13 @@
 					<td>Time of Booking</td>
 
 					<td> <asp:Label ID="timee" runat="server" ></asp:Label></td>
+				</tr><tr class="item last">
+					<td>Order</td>
+
+					<td>1.Cold Coffee<br />
+					    2.Margherita Pizza<br />
+					    3.Cheese plain <br />
+					4.Seasonal fresh fruit sundae</td>
 				</tr>
 
 				<tr class="total">

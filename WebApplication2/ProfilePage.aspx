@@ -25,8 +25,8 @@
       Your Mail ID:
       
       
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-        <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text="You are not Logged In"></asp:Label>
+       
       
       
 </p>
@@ -40,15 +40,15 @@
   </h2>
 <p class="title">
   Your Mobile No. :
-    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="Label2" runat="server" Text="You are not Logged In"></asp:Label>
   </p>
 <p class="title">WELCOME to Café Reminiscence</p><br>
-  <p>PUNE</p>
+  <p style="color:antiquewhite">KOTHRUD,PUNE</p>
   <div style="margin: 24px 0;">
-    <a href="#"><i class="fa fa-dribbble"></i></a> 
-    <a href="#"><i class="fa fa-twitter"></i></a>  
-    <a href="#"><i class="fa fa-linkedin"></i></a>  
-    <a href="#"><i class="fa fa-facebook"></i></a> 
+    <a style="color:antiquewhite"href="#"><i class="fa fa-dribbble"></i></a> 
+    <a style="color:antiquewhite"href="#"><i class="fa fa-twitter"></i></a>  
+    <a style="color:antiquewhite"href="#"><i class="fa fa-linkedin"></i></a>  
+    <a style="color:antiquewhite" href="#"><i class="fa fa-facebook"></i></a> 
   </div>
   
 

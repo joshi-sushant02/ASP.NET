@@ -21,8 +21,8 @@
         <input type="text" placeholder="What is the name of your Fisrt School" id="securityQ" runat="server">
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="securityQ" ErrorMessage="Please enter security answer"></asp:RequiredFieldValidator>
         
-        &nbsp;<label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password" runat="server"><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="password" ErrorMessage="Please enter password"></asp:RequiredFieldValidator>
+        &nbsp;<label for="password">New Password</label>
+        <input type="password" placeholder="New Password" id="password" runat="server"><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="password" ErrorMessage="Please enter password"></asp:RequiredFieldValidator>
     
         
         <div class="social">

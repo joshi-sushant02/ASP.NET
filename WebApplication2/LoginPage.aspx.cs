@@ -35,7 +35,7 @@ namespace WebApplication2
                     SqlCommand cmd1 = new SqlCommand("Insert into Login (email,mobileNo,password) values('" + Text1.Value + "','" + dr.GetValue(2).ToString() + "','" + password.Value + "')", con);
                     dr.Close();
                     cmd1.ExecuteNonQuery();
-                    Response.Redirect("ProfilePage.aspx");
+                    Response.Redirect("HomePage.aspx");
                     }
                 else 
                 {

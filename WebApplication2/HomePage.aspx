@@ -9,16 +9,20 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <header><h1>CAFE REMINISCENCE</h1></header>
+        <header><h1>CAFE REMINISCENCE-MENU</h1></header>
+        <div>
+
+        <a href="ProfilePage.aspx"><h3>PROFILE</h3></a>
+        </div>
     <div id="main">
       <section>
-        <h2>MENU</h2>
         <div class="block">
             <h3>Hot/Cold Bevrages</h3>
             <p class="item">Cold Coffee <input type="checkbox" name="" id=""><span class="right">2.25 / 1.75 / 1.50</span></p>
             <p class="item">Hot Coffee <input type="checkbox" name="" id=""><span class="right">2.35 / 1.85</span></p>
             <p class="item">Cappuccino <input type="checkbox" name="" id=""><span class="right">2.75 / 2.50 / 2.25</span></p>
         </div>
+       
         <div class="block">
             <h3>PIZZA</h3>
             <p class="item">Margherita Pizza<input type="checkbox" name="" id=""><span class="right">4.00 / 3.50 / 2.75</span></p>
@@ -47,6 +51,15 @@
           <p class="item">Fruit trifle sundae <input type="checkbox" name="" id=""><span class="right">4.50</span></p>
           <div class="item"><p>Nutty Muddry <input type="checkbox" name="" id=""><span class="right">4.50</span></p>
         </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        <a  href="booking.aspx"><h3>NEXT</h3></a>
       </section>
       
     </div>

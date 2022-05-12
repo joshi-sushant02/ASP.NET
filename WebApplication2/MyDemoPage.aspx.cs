@@ -76,13 +76,13 @@ namespace WebApplication2
             con.Close();
 
 
-            cmd = new SqlCommand("select * from userDetails", con);
-            con.Open();
-            GridView1.DataSource = cmd.ExecuteReader();
-            GridView1.DataBind();
-            con.Close();
+           // cmd = new SqlCommand("select * from userDetails", con);
+           // con.Open();
+           // GridView1.DataSource = cmd.ExecuteReader();
+           // GridView1.DataBind();
+           // con.Close();
 
-            Response.Redirect("ProfilePage.aspx");
+            Response.Redirect("HomePage.aspx");
         }
     }
 }
