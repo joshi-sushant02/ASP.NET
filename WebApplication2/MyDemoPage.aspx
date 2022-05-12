@@ -63,9 +63,6 @@
       
        
         
-        <asp:GridView ID="GridView1" runat="server" ForeColor="Red">
-      
-        </asp:GridView>
     </form>
     
 </body>

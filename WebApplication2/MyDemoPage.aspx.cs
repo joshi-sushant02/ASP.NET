@@ -56,8 +56,8 @@ namespace WebApplication2
 
             cmd = new SqlCommand("select * from userDetails", con);
             con.Open();
-           GridView1.DataSource= cmd.ExecuteReader();
-            GridView1.DataBind();
+          // GridView1.DataSource= cmd.ExecuteReader();
+           // GridView1.DataBind();
             con.Close();
 
 

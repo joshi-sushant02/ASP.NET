@@ -54,7 +54,7 @@
 
     <asp:Button class="submit2" ID="Button2" runat="server" Text="Logout" OnClick="Button2_Click" />
   <p><button class="bill">   <a href="bill.aspx"> Get bill</a></button></p>
-  <p><button class="bill">   <a href="booking.aspx">Book a Table</a></button></p>
+  <p><button class="bill">   <a href="HomePage.aspx">Select menu</a></button></p>
 </div>
 
     </form>
